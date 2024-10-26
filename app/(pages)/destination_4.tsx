@@ -1,7 +1,8 @@
 import { Text, View, SafeAreaView, StyleSheet, Image } from "react-native";
-import { AntDesign, Entypo } from "@expo/vector-icons";
+import { AntDesign, Entypo, FontAwesome } from "@expo/vector-icons";
 
 export default function destination() {
+  const sizeIcon = 15;
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.containerImg}>
@@ -41,8 +42,78 @@ export default function destination() {
           >
             Santorini
           </Text>
-          <View>
-            <AntDesign name="star" size={20} color="yellow" style={{}} />
+          <View
+            style={{
+              position: "absolute",
+              flex: 1,
+              flexDirection: "row",
+              top: "30%",
+              right: 5,
+              backgroundColor: "#a3a3a3",
+              borderRadius: 5,
+              width: 80,
+              justifyContent: "center",
+              alignItems: "center",
+              elevation: 20,
+              height: 20,
+              gap: 2,
+            }}
+          >
+            <FontAwesome
+              name="star"
+              size={sizeIcon}
+              color="yellow"
+              style={{
+                elevation: 10,
+              }}
+            />
+            <FontAwesome
+              name="star"
+              size={sizeIcon}
+              color="yellow"
+              style={{
+                elevation: 10,
+              }}
+            />
+            <FontAwesome
+              name="star"
+              size={sizeIcon}
+              color="yellow"
+              style={{
+                elevation: 10,
+              }}
+            />
+            <FontAwesome
+              name="star"
+              size={sizeIcon}
+              color="yellow"
+              style={{
+                elevation: 10,
+              }}
+            />
+            <FontAwesome
+              name="star"
+              size={sizeIcon}
+              color="grey"
+              style={{
+                elevation: 10,
+              }}
+            />
+          </View>
+          <View
+            style={{
+              position: "absolute",
+              top: "55%",
+              right: 5,
+            }}
+          >
+            <Text
+              style={{
+                color: "gray",
+              }}
+            >
+              33 reviews
+            </Text>
           </View>
         </View>
         <View style={{}}>
@@ -76,6 +147,13 @@ export default function destination() {
             shaping its rugged landscape.
           </Text>
         </View>
+        <View
+          style={{
+            paddingTop: 10,
+          }}
+        >
+          <Text>Photos</Text>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -95,6 +173,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     backgroundColor: "white",
     padding: 20,
+    elevation: 20,
   },
   // ---------------------------------------------------
   icon: {},
@@ -108,5 +187,7 @@ const styles = StyleSheet.create({
     right: 15,
     top: 15,
   },
-  textOne: {},
+  textOne: {
+    position: "relative",
+  },
 });
