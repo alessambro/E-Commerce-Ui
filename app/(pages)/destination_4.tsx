@@ -1,5 +1,55 @@
-import { Text, View, SafeAreaView, StyleSheet, Image } from "react-native";
+import {
+  Text,
+  View,
+  SafeAreaView,
+  StyleSheet,
+  Image,
+  FlatList,
+} from "react-native";
 import { AntDesign, Entypo, FontAwesome } from "@expo/vector-icons";
+
+const DATA = [
+  {
+    id: "1",
+    src: "",
+  },
+  {
+    id: "2",
+    src: "",
+  },
+  {
+    id: "3",
+    src: "",
+  },
+  {
+    id: "4",
+    src: "",
+  },
+  {
+    id: "5",
+    src: "",
+  },
+  {
+    id: "6",
+    src: "",
+  },
+];
+
+type ItemProps = { id: string; src: string };
+
+const Item = ({ id, src }: ItemProps) => {
+  return (
+    <Image
+      source={{ uri: src }}
+      style={{
+        height: 100,
+        borderRadius: 5,
+        width: "100%",
+        resizeMode: "cover",
+      }}
+    />
+  );
+};
 
 export default function destination() {
   const sizeIcon = 15;
@@ -152,7 +202,14 @@ export default function destination() {
             paddingTop: 10,
           }}
         >
-          <Text>Photos</Text>
+          <Text
+            style={{
+              fontWeight: "900",
+              fontSize: 20,
+            }}
+          >
+            Photos
+          </Text>
         </View>
       </View>
     </SafeAreaView>
